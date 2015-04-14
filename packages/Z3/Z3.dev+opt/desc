@@ -1,0 +1,5 @@
+Z3 is an open source SMT solver by Microsoft.
+
+For this package to work properly, you need to export the following before installing:
+
+    export LD_LIBRARY_PATH=`ocamlfind printconf destdir`/stublibs
