@@ -1,0 +1,24 @@
+opam-version: "1.2"
+maintainer: "Gabriel Radanne <drupyog@zoho.com>"
+authors: "Gabriel Radanne <drupyog@zoho.com>"
+license: "MIT"
+homepage: "https://github.com/termite-analyser/llvm2smt"
+bug-reports: "https://github.com/termite-analyser/llvm2smt/issues"
+dev-repo: "https://github.com/termite-analyser/llvm2smt.git"
+
+tags: ["llvm" "smt" "Z3"]
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+install: ["ocaml" "setup.ml" "-install"]
+remove: ["ocamlfind" "remove" "llvm2smt"]
+depends: [
+  "ocamlfind" {build}
+  "llvm"
+  "Z3overlay"
+  "ocamlgraph" {>= "1.8.6"}
+  "llvmgraph" {>= "0.2"}
+  ## OASIS is not required in released version
+  "oasis" {build & >= "0.4.4"}
+]
