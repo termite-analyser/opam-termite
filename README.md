@@ -1,6 +1,8 @@
 Opam repository for termite packages.
 ========
 
+[termite][termite] is a termination analyser.
+
 To install termite using opam:
 
 ```sh
@@ -13,3 +15,5 @@ export LD_LIBRARY_PATH=`ocamlfind printconf destdir`/stublibs
 opam install termite -v
 
 ```
+
+[termite]: https://termite-analyser.github.io/
