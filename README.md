@@ -5,6 +5,8 @@ Opam repository for termite packages.
 
 To install termite using opam:
 
+- Install llvm 3.6
+
 - Add the repository.
   ```sh
   opam remote add termite https://github.com/termite-analyser/opam-termite.git
