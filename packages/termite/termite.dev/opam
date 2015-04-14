@@ -12,7 +12,7 @@ build: [
   ["ocaml" "setup.ml" "-build"]
 ]
 install: ["ocaml" "setup.ml" "-install"]
-remove: ["ocaml" "setup.ml" "-uninstall"]
+remove: ["ocamlfind" "remove" "termite"]
 depends: [
   "ocamlfind" {build}
   "llvm"
