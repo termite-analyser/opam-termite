@@ -1,0 +1,25 @@
+opam-version: "1.2"
+maintainer: "Gabriel Radanne <drupyog@zoho.com>"
+authors: "Gabriel Radanne <drupyog@zoho.com>"
+license: "LGPL"
+homepage: "https://github.com/termite-analyser/termite"
+bug-reports: "https://github.com/termite-analyser/termite/issues"
+dev-repo: "https://github.com/termite-analyser/termite.git"
+
+tags: ["llvm" "Z3" "smt" "termination"]
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+install: ["ocaml" "setup.ml" "-install"]
+remove: ["ocaml" "setup.ml" "-uninstall"]
+depends: [
+  "ocamlfind" {build}
+  "llvm"
+  "zarith"
+  "batteries"
+  "Z3overlay" {= "dev+opt"}
+  "llvm2smt"
+  ## OASIS is not required in released version
+  "oasis" {>= "0.4.4"}
+]
