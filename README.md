@@ -12,12 +12,6 @@ To install termite using opam:
   opam remote add termite https://github.com/termite-analyser/opam-termite.git
   ```
 
-- Run and add this to your .bashrc.
-  ```sh
-  export LD_LIBRARY_PATH=`ocamlfind printconf destdir`/stublibs
-  export LIBRARY_PATH=`ocamlfind printconf destdir`/stublibs
-  ```
-
 - Take a coffee, and wait for Z3's compilation.
   ```
   opam install termite -v
