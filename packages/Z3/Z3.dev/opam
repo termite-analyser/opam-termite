@@ -10,7 +10,7 @@ build: [
   [make "-C" "build" "-j" jobs]
 ]
 install: [
-  [make "-C" "build" "ocamlfind_install"]
+  [make "-C" "build" "install"]
 ]
 remove: [
   ["ocamlfind" "remove" "Z3"]
