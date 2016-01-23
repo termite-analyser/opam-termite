@@ -22,5 +22,5 @@ depends: [
 
 messages: [
   "Before installing any package depending on Z3, please export the following variable:
-  export LD_LIBRARY_PATH=`ocamlfind printconf destdir`/stublibs"
+  export LD_LIBRARY_PATH=\"$(ocamlfind printconf destdir)/stublibs:${LD_LIBRARY_PATH}\""
 ]
