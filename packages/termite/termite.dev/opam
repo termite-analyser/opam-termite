@@ -6,12 +6,14 @@ homepage: "https://github.com/termite-analyser/termite"
 bug-reports: "https://github.com/termite-analyser/termite/issues"
 dev-repo: "https://github.com/termite-analyser/termite.git"
 
+
 tags: ["llvm" "Z3" "smt" "termination"]
 build: [
   ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
   ["ocaml" "setup.ml" "-build"]
 ]
 install: ["ocaml" "setup.ml" "-install"]
+
 remove: ["ocamlfind" "remove" "termite"]
 depends: [
   "ocamlfind" {build}
@@ -19,7 +21,7 @@ depends: [
   "llvm"
   "zarith"
   "batteries"
-  "Z3overlay" {= "dev+opt"}
+  "z3overlay"
   "llvm2smt"
   ## OASIS is not required in released version
   "oasis" {>= "0.4.4"}
