@@ -14,7 +14,7 @@ build: [
 ]
 install: ["ocaml" "setup.ml" "-install"]
 build-doc: ["ocaml" "setup.ml" "-doc"]
-remove: ["ocamlfind" "remove" "Z3overlay"]
+remove: ["ocamlfind" "remove" "z3overlay"]
 depends: [
   "ocamlfind" {build}
   "z3"
