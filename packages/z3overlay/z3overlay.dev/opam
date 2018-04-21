@@ -19,4 +19,6 @@ depends: [
   "ocamlfind" {build}
   "z3"
   "zarith"
+  ## OASIS is not required in released version
+  "oasis" {build & >= "0.4.4"}
 ]
